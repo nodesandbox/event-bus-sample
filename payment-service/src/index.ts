@@ -1,6 +1,5 @@
-// services/payment-service/src/index.ts
 import express, { Request, Response } from 'express';
-import { RabbitMQEventBus, EventFactory } from '@digitaltg/event-bus';
+import { RabbitMQEventBus, EventFactory } from '@nodesandbox/event-bus';
 import { RABBITMQ_URL, SERVICES } from '../../shared/config';
 import { PaymentData } from '../../shared/types';
 import { PaymentEventType } from '../../shared/events';

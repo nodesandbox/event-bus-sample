@@ -1,6 +1,5 @@
-// services/inventory-service/src/index.ts
 import express, { Request, Response } from 'express';
-import { RabbitMQEventBus, EventFactory } from '@digitaltg/event-bus';
+import { RabbitMQEventBus, EventFactory } from '@nodesandbox/event-bus';
 import { RABBITMQ_URL, SERVICES } from '../../shared/config';
 import { StockData, StockCheckResponse, OrderItem } from '../../shared/types';
 import { EventType, OrderEventType, StockEventType } from '../../shared/events';

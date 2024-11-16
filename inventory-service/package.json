@@ -10,6 +10,7 @@
     "license": "ISC",
     "description": "",
     "dependencies": {
+        "@nodesandbox/event-bus": "^0.2.0",
         "amqplib": "^0.10.4",
         "express": "^4.21.1",
         "ts-node": "^10.9.2",
