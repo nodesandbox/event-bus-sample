@@ -1,0 +1,4 @@
+payment-service/node_modules
+order-service/node_modules
+notification-service/node_modules
+inventory-service/node_modules

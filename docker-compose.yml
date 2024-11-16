@@ -1,0 +1,54 @@
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - event-network
+
+  # order-service:
+  #   build: ./order-service
+  #   container_name: order-service
+  #   ports:
+  #     - "3001:3001"
+  #   networks:
+  #     - event-network
+  #   depends_on:
+  #     - rabbitmq
+
+  # inventory-service:
+  #   build: ./inventory-service
+  #   container_name: inventory-service
+  #   ports:
+  #     - "3002:3002"
+  #   networks:
+  #     - event-network
+  #   depends_on:
+  #     - rabbitmq
+
+  # payment-service:
+  #   build: ./payment-service
+  #   container_name: payment-service
+  #   ports:
+  #     - "3003:3003"
+  #   networks:
+  #     - event-network
+  #   depends_on:
+  #     - rabbitmq
+
+  # notification-service:
+  #   build: ./notification-service
+  #   container_name: notification-service
+  #   ports:
+  #     - "3004:3004"
+  #   networks:
+  #     - event-network
+  #   depends_on:
+  #     - rabbitmq
+
+networks:
+  event-network:
+    driver: bridge
